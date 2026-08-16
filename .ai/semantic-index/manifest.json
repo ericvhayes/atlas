@@ -1,8 +1,8 @@
 {
   "provider": "ollama:nomic-embed-text",
   "dim": 768,
-  "built_at": "2026-08-16T17:06:10+00:00",
-  "fingerprint": "94b8b6ab71aa980f5ae88b7dd796a3170da102241c05cd3ddf48acff978af18e",
+  "built_at": "2026-08-16T17:08:34+00:00",
+  "fingerprint": "bbe0bd69f5fa7ed0d52bb3768fd77e40331f776885ec13399415bdf6098dad01",
   "doc_metas": [
     {
       "kind": "topic",
@@ -14,11 +14,11 @@
     },
     {
       "kind": "data",
-      "ref": "atlas-v2-setup/sources/machine binding notes.md",
+      "ref": "atlas-setup/sources/machine binding notes.md",
       "title": "machine binding notes.md",
       "scope": "global",
-      "path": "/Users/eric/OneDrive/AI_Brain/atlas_data/Topics/atlas-v2-setup/sources/machine binding notes.md",
-      "card": "machine binding notes.md \u2014 atlas-v2-setup document (md)"
+      "path": "/Users/eric/OneDrive/AI_Brain/atlas_data/Topics/atlas-setup/sources/machine binding notes.md",
+      "card": "machine binding notes.md \u2014 atlas-setup document (md)"
     }
   ],
   "chunks": [
@@ -32,7 +32,7 @@
     },
     {
       "doc": 1,
-      "text": "machine binding notes.md \u2014 atlas-v2-setup document (md)"
+      "text": "machine binding notes.md \u2014 atlas-setup document (md)"
     },
     {
       "doc": 1,
