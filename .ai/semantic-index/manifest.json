@@ -1,16 +1,16 @@
 {
   "provider": "ollama:nomic-embed-text",
   "dim": 768,
-  "built_at": "2026-08-16T16:51:17+00:00",
-  "fingerprint": "82a1feb22e9a66ac23dc1d2557622455d0bc23349c28c8f350f5ecbf2d05f792",
+  "built_at": "2026-08-16T17:06:10+00:00",
+  "fingerprint": "94b8b6ab71aa980f5ae88b7dd796a3170da102241c05cd3ddf48acff978af18e",
   "doc_metas": [
     {
       "kind": "topic",
-      "ref": "atlas-v2-setup",
-      "title": "Atlas v2 Setup",
+      "ref": "atlas-setup",
+      "title": "Atlas Setup",
       "scope": "global",
-      "path": "/Users/eric/Documents/AI_Brain/atlas/topics/atlas-v2-setup/notes.md",
-      "card": "Atlas v2 Setup \u2014 architecture \u2014 Bootstrap and operating notes for the OneDrive-split atlas"
+      "path": "/Users/eric/Documents/AI_Brain/atlas/topics/atlas-setup/notes.md",
+      "card": "Atlas Setup \u2014 architecture \u2014 Bootstrap and operating notes for the OneDrive-split atlas"
     },
     {
       "kind": "data",
@@ -24,11 +24,11 @@
   "chunks": [
     {
       "doc": 0,
-      "text": "Atlas v2 Setup \u2014 architecture \u2014 Bootstrap and operating notes for the OneDrive-split atlas"
+      "text": "Atlas Setup \u2014 architecture \u2014 Bootstrap and operating notes for the OneDrive-split atlas"
     },
     {
       "doc": 0,
-      "text": "Atlas v2 Setup \u2014 architecture \u2014 Bootstrap and operating notes for the OneDrive-split atlas # Atlas v2 Setup ## 2026-08-16 Topic created."
+      "text": "Atlas Setup \u2014 architecture \u2014 Bootstrap and operating notes for the OneDrive-split atlas # Atlas Setup ## 2026-08-16 Topic created."
     },
     {
       "doc": 1,

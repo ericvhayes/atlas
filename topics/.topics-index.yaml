@@ -1,6 +1,6 @@
 topics:
-- slug: atlas-v2-setup
-  name: Atlas v2 Setup
+- slug: atlas-setup
+  name: Atlas Setup
   status: active
   scope: global
   tags:

@@ -1,4 +1,4 @@
-# Atlas v2 Setup
+# Atlas Setup
 
 ## 2026-08-16
 

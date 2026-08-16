@@ -1,6 +1,6 @@
-# Atlas v2 Setup — Orientation
+# Atlas Setup — Orientation
 
-Atlas v2 is Eric Hayes's personal AI knowledge system, rebuilt clean on
+Atlas is Eric Hayes's personal AI knowledge system, rebuilt clean on
 2026-08-16 around a three-store architecture: a git repository holds the text
 control plane (identity, notes, configuration), a OneDrive folder called
 atlas_data holds bulk documents, and a second OneDrive folder called
@@ -8,7 +8,7 @@ atlas_lite holds this generated projection for Microsoft 365 Copilot. This
 topic records how the system was bootstrapped, how this machine is bound to
 its storage, and how the pieces are operated day to day.
 
-## Atlas v2 Setup — what it is
+## Atlas Setup — what it is
 
 The atlas repository lives at `~/Documents/AI_Brain/atlas` and is pushed to
 `github.com/ericvhayes/atlas`. It was started blank on 2026-08-16 (a
@@ -19,7 +19,7 @@ projects the atlas is **axis**, a Python CLI maintained in the agora monorepo
 (`agora/engines/axis`) and installed on this machine as an editable uv tool,
 so `axis` and `axis-mcp` are on PATH everywhere.
 
-## Atlas v2 Setup — current state
+## Atlas Setup — current state
 
 - Storage bindings on the Mac: data root `~/OneDrive/AI_Brain/atlas_data`,
   lite root `~/OneDrive/AI_Brain/atlas_lite`, both recorded per-machine in
@@ -37,7 +37,7 @@ so `axis` and `axis-mcp` are on PATH everywhere.
   reconciling export that only writes changed files and only publishes
   content explicitly approved for M365.
 
-## Atlas v2 Setup — key decisions
+## Atlas Setup — key decisions
 
 - **2026-08-14 — three-store split decided** (recorded in the previous
   atlas's design topic): git for the text control plane, OneDrive
@@ -54,7 +54,7 @@ so `axis` and `axis-mcp` are on PATH everywhere.
 - **2026-08-16 — commit is the approval gate**: lite export refuses to run
   while any published source file has uncommitted changes.
 
-## Atlas v2 Setup — open questions
+## Atlas Setup — open questions
 
 - Verify what the personal (outlook.com) Microsoft Copilot can actually
   ground on — folder scoping via Agent Builder is unconfirmed; the
@@ -64,7 +64,7 @@ so `axis` and `axis-mcp` are on PATH everywhere.
 - Scheduled unattended runs (daily sync/export) await the argus control
   plane; today the session hooks and manual runs cover it.
 
-## Atlas v2 Setup — glossary
+## Atlas Setup — glossary
 
 - **axis** — the CLI engine that organizes the atlas and generates
   per-tool configuration (Claude Code, GitHub Copilot, OpenCode).
