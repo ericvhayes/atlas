@@ -1,0 +1,42 @@
+{
+  "provider": "ollama:nomic-embed-text",
+  "dim": 768,
+  "built_at": "2026-08-16T16:51:17+00:00",
+  "fingerprint": "82a1feb22e9a66ac23dc1d2557622455d0bc23349c28c8f350f5ecbf2d05f792",
+  "doc_metas": [
+    {
+      "kind": "topic",
+      "ref": "atlas-v2-setup",
+      "title": "Atlas v2 Setup",
+      "scope": "global",
+      "path": "/Users/eric/Documents/AI_Brain/atlas/topics/atlas-v2-setup/notes.md",
+      "card": "Atlas v2 Setup \u2014 architecture \u2014 Bootstrap and operating notes for the OneDrive-split atlas"
+    },
+    {
+      "kind": "data",
+      "ref": "atlas-v2-setup/sources/machine binding notes.md",
+      "title": "machine binding notes.md",
+      "scope": "global",
+      "path": "/Users/eric/OneDrive/AI_Brain/atlas_data/Topics/atlas-v2-setup/sources/machine binding notes.md",
+      "card": "machine binding notes.md \u2014 atlas-v2-setup document (md)"
+    }
+  ],
+  "chunks": [
+    {
+      "doc": 0,
+      "text": "Atlas v2 Setup \u2014 architecture \u2014 Bootstrap and operating notes for the OneDrive-split atlas"
+    },
+    {
+      "doc": 0,
+      "text": "Atlas v2 Setup \u2014 architecture \u2014 Bootstrap and operating notes for the OneDrive-split atlas # Atlas v2 Setup ## 2026-08-16 Topic created."
+    },
+    {
+      "doc": 1,
+      "text": "machine binding notes.md \u2014 atlas-v2-setup document (md)"
+    },
+    {
+      "doc": 1,
+      "text": "# Machine binding \u2014 Mac (2026-08-16) - atlas: atlas-personal at ~/Documents/AI_Brain/atlas (github.com/ericvhayes/atlas) - data root: ~/OneDrive/AI_Brain/atlas_data \u00b7 lite root: ~/OneDrive/AI_Brain/atlas_lite - bound via ~/.axis-data.yaml; axis installed via `uv tool install --editable agora/engines/axis`"
+    }
+  ]
+}
