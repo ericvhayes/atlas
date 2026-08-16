@@ -1,0 +1,8 @@
+# Files and directories AI should never read or index.
+# Uses gitignore-style patterns.
+
+# node_modules/
+# .env
+# *.secret
+# dist/
+# build/

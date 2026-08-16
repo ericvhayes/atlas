@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "bash": "#!/bin/bash\n# axis: Auto-sync + load memory at session start\ncommand -v axis >/dev/null 2>&1 && axis sync --quiet 2>/dev/null\n\nATLAS_DIR=\".ai/memory\"\nMEMORY=\"${ATLAS_DIR}/MEMORY.md\"\nUSER_MD=\"${ATLAS_DIR}/USER.md\"\nTODAY=$(date +%Y-%m-%d)\nDAILY=\"${ATLAS_DIR}/daily/${TODAY}.md\"\n\n[ -f \"$MEMORY\" ] && cat \"$MEMORY\"\n[ -f \"$USER_MD\" ] && cat \"$USER_MD\"\n[ -f \"$DAILY\" ] && cat \"$DAILY\"\n",
+        "powershell": "# axis: Auto-sync + load memory at session start\nif (Get-Command axis -ErrorAction SilentlyContinue) { axis sync --quiet 2>$null }\n\n$atlasDir = '.ai/memory'\n$memory = \"$atlasDir/MEMORY.md\"\n$userMd = \"$atlasDir/USER.md\"\n$today = Get-Date -Format 'yyyy-MM-dd'\n$daily = \"$atlasDir/daily/$today.md\"\n\nif (Test-Path $memory) { Get-Content $memory -Raw }\nif (Test-Path $userMd) { Get-Content $userMd -Raw }\nif (Test-Path $daily) { Get-Content $daily -Raw }\n",
+        "timeoutSec": 10
+      }
+    ],
+    "agentStop": [
+      {
+        "type": "command",
+        "bash": "#!/bin/bash\n# axis: Capture transcript summary\nTODAY=$(date +%Y-%m-%d)\nTIME=$(date +%H:%M:%S)\nDIR=\".ai/memory/transcripts\"\nFILE=\"${DIR}/${TODAY}.md\"\nmkdir -p \"$DIR\"\n\n# Read stdin (hook payload), extract response if available\nINPUT=$(cat)\nRESPONSE=$(echo \"$INPUT\" | head -c 500 2>/dev/null || echo \"\")\nif [ -n \"$RESPONSE\" ]; then\n  echo -e \"\\n## ${TIME}\\n${RESPONSE}\\n\" >> \"$FILE\"\nfi\n",
+        "powershell": "# axis: Capture transcript summary\n$today = Get-Date -Format 'yyyy-MM-dd'\n$time = Get-Date -Format 'HH:mm:ss'\n$dir = '.ai/memory/transcripts'\n$file = \"$dir/$today.md\"\nNew-Item -ItemType Directory -Path $dir -Force | Out-Null\n\n$input = $Input | Out-String\n$response = $input.Substring(0, [Math]::Min(500, $input.Length))\nif ($response) {\n    Add-Content -Path $file -Value \"`n## $time`n$response`n\"\n}\n",
+        "timeoutSec": 5
+      }
+    ]
+  }
+}

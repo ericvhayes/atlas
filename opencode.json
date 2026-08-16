@@ -1,0 +1,14 @@
+{
+  "instructions": [
+    ".ai/memory/MEMORY.md",
+    ".ai/memory/USER.md"
+  ],
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "cat .ai/memory/*": "allow",
+      "wc *": "allow",
+      "mkdir -p .ai/memory/*": "allow"
+    }
+  }
+}

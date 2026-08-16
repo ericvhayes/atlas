@@ -1,0 +1,4 @@
+# Atlas topics configuration.
+# root is relative to Atlas home (this repo), so topic workspaces live IN the
+# repo and are version-controlled — portable across machines with no env vars.
+root: topics

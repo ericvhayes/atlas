@@ -1,0 +1,37 @@
+# Atlas semantic search configuration.
+#
+# backend: how query/document embeddings are computed.
+#   auto    — pick the first available: onnx → local → ollama → openai (recommended)
+#   onnx    — offline ONNX Runtime model; same vectors as 'local' but loads in
+#             ~1s instead of ~40s (run `ai-atlas semantic export-onnx` once first)
+#   local   — offline sentence-transformers model (no network, no API key)
+#   ollama  — local Ollama server (ollama_url / ollama_model)
+#   openai  — OpenAI-compatible API (key read from $OPENAI_API_KEY only)
+#   lexical — pure-python BM25 fallback (no ML deps; always works)
+#
+# If the chosen backend is unavailable at runtime, search degrades gracefully
+# to the lexical BM25 ranker rather than failing.
+backend: auto
+
+# Local (sentence-transformers) settings.
+# offline=true loads only from the local HuggingFace cache — instant and avoids
+# slow SSL retries on locked-down networks. Set false to allow model downloads.
+local_model: BAAI/bge-small-en-v1.5
+offline: true
+
+# ONNX model directory (used by the 'onnx' backend). Defaults to
+# <atlas_home>/.ai/semantic-models/<model-basename>. Generated once with
+# `ai-atlas semantic export-onnx` and git-ignored (large, machine-local).
+# onnx_model_dir: 
+
+# Ollama settings (used when backend is ollama/auto and a server is reachable).
+ollama_url: http://localhost:11434
+ollama_model: nomic-embed-text
+
+# OpenAI-compatible settings (API key comes from the env var below, never here).
+openai_base_url: https://api.openai.com/v1
+openai_model: text-embedding-3-small
+openai_api_key_env: OPENAI_API_KEY
+
+# Max words per indexed chunk.
+chunk_max_words: 400

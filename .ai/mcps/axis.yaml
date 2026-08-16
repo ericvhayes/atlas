@@ -1,0 +1,11 @@
+name: axis
+description: >-
+  Atlas semantic search — find topics and wiki pages by meaning, not just by
+  slug/keyword. Tools: atlas_search, topic_find, wiki_search, semantic_reindex.
+command: axis-mcp
+args: []
+transport: stdio
+targets:
+  - copilot-cli
+  - vscode
+  - claude

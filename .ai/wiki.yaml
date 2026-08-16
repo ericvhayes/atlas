@@ -1,0 +1,12 @@
+# Atlas wiki configuration.
+# global_path is relative to Atlas home (this repo), so the wiki lives IN the
+# repo and is version-controlled — portable across machines with no env vars.
+global_path: wiki
+obsidian_compat: true
+auto_index: true
+page_categories:
+  - entities
+  - concepts
+  - sources
+  - comparisons
+  - analyses

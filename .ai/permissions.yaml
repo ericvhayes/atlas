@@ -1,0 +1,10 @@
+# Tool permissions — projected to Claude settings.json and Opencode config
+# Uncomment and customize as needed.
+
+# allow:
+#   - Read
+#   - Write(.ai/*)
+#   - Bash(cat .ai/memory/*)
+
+# deny:
+#   - Bash(rm -rf *)

@@ -1,0 +1,17 @@
+{
+    "mcpServers": {
+        "axis": {
+            "command": "axis-mcp",
+            "args": []
+        },
+        "chattoapi-ms365": {
+            "command": "node",
+            "args": [
+                "/Users/eric/Documents/AI_Brain/ai-tools/ChatToApi/mcp/ms365-server.mjs"
+            ],
+            "env": {
+                "CHATTOAPI_BASE_URL": "http://127.0.0.1:8090/ms365/v1"
+            }
+        }
+    }
+}

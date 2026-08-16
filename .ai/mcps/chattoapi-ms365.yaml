@@ -1,0 +1,12 @@
+name: chattoapi-ms365
+description: Microsoft 365 Copilot via ChatToApi — ask work questions grounded in mail, calendar, files, and Teams (ask_microsoft365, search_my_email, search_my_files, my_calendar). Requires the ChatToApi app running with the ms365 site signed in.
+command: node
+args:
+  - ~/Documents/AI_Brain/ai-tools/ChatToApi/mcp/ms365-server.mjs
+env:
+  CHATTOAPI_BASE_URL: http://127.0.0.1:8090/ms365/v1
+transport: stdio
+targets:
+  - copilot-cli
+  - vscode
+  - claude
