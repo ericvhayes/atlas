@@ -12,3 +12,11 @@ DAILY="${ATLAS_DIR}/daily/${TODAY}.md"
 [ -f "$MEMORY" ] && cat "$MEMORY"
 [ -f "$USER_MD" ] && cat "$USER_MD"
 [ -f "$DAILY" ] && cat "$DAILY"
+
+# Data plane: orient the session — binding health + anything waiting in Inbox.
+# (A crashed prior session may have left manifests stale; reconcile is cheap
+# and stat-only, so run it here too rather than only at Stop.)
+if [ -f .ai/data.yaml ] && command -v axis >/dev/null 2>&1; then
+  axis data sync 2>/dev/null | grep -v '^$'
+  axis data status 2>/dev/null | grep -v '^$'
+fi

@@ -1,0 +1,10 @@
+name: Atlas v2 Setup
+slug: atlas-v2-setup
+created: '2026-08-16'
+updated: '2026-08-16'
+status: active
+scope: global
+tags:
+- architecture
+description: Bootstrap and operating notes for the OneDrive-split atlas
+wiki_promoted: []

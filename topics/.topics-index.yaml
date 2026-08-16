@@ -1,0 +1,9 @@
+topics:
+- slug: atlas-v2-setup
+  name: Atlas v2 Setup
+  status: active
+  scope: global
+  tags:
+  - architecture
+  created: '2026-08-16'
+  updated: '2026-08-16'
