@@ -3,3 +3,4 @@
 .ai/.memsearch/
 .ai/.drift-hashes.json
 .DS_Store
+.ai/data.local.yaml

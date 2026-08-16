@@ -1,0 +1,10 @@
+# The data-plane declaration (committed; per-machine binding lives outside git).
+# Resolution per machine: ATLAS_DATA_ROOT / ATLAS_LITE_ROOT env ->
+# .ai/data.local.yaml -> ~/.axis-data.yaml -> autodiscovery on OneDrive mounts.
+atlas_id: atlas-personal
+data_root_name: atlas_data
+lite:
+  # consumer profile: browsable knowledge bundle + paste-ready instructions,
+  # no declarative-agent manifest (decision D, 2026-08-14).
+  profile: consumer
+  root_name: atlas_lite
